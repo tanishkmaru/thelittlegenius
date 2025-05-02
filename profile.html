@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Little Genius</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <div class="hi">
+        <h1>ABOUT US</h1>
+        <p>
+            Starting school is a wonderful and adventurous time for every child.<br> 
+            It is like a new milestone and an exciting achievement.<br> 
+            Every parent has thousands of queries, expectations, and questions.<br> 
+            The choice of the right school is the most crucial step to ensure a well-balanced childhood.<br>
+            If you are looking for the finest school where your child is safe- physically, emotionally and socially, you have come to the perfect destination- The Little Genius, Bengaluru.<br> We at The Little Genius promise to provide a rich learning environment for each and every child.<br> This environment is full of a wide variety of well planned activities.<br> These activities may appear like playing to the onlooker, whereas they focus on development of essential skills for the child.<br> Bright, child safe classrooms, clean well maintained washrooms with planned spaces for play areas, splash pools etc, the school is a marvelous space for grooming the social, emotional, physical and language skills of the students.
+        </p>
+    </div>
+
+    <script>
+        gsap.from("h1", {
+            duration: 1.5,
+            opacity: 0,
+            y: -50,
+            ease: "power2.out",
+            scale: 0.9
+        });
+
+        gsap.from("p", {
+            duration: 1.5,
+            opacity: 0,
+            x: 50,
+            delay: 0.5,
+            ease: "power2.out",
+            stagger: 0.2
+        });
+
+        gsap.from(".hi", {
+            duration: 1.5,
+            opacity: 0,
+            scale: 0.8,
+            ease: "elastic.out(1, 0.5)"
+        });
+
+        gsap.to("h1", {
+            scale: 1.1,
+            duration: 0.5,
+            ease: "power1.inOut",
+            repeat: -1,
+            yoyo: true
+        });
+
+        // Parallax effect when scrolling
+        gsap.to(".hi", {
+            y: -50,
+            scrollTrigger: {
+                trigger: ".hi",
+                start: "top 80%",
+                end: "bottom 50%",
+                scrub: true
+            }
+        });
+
+        // Smooth scrolling fix to remove the blinking scrollbar
+        document.body.style.overflowX = "hidden";
+    </script>
+
+</body>
+</html>

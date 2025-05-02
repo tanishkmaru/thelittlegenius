@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Little Genius</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/EasePack.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">The Little Genius</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+        <a href="#">ABOUT</a>
+        <ul class="dropdown-content">
+          <li><a href="profile.html">PROFILE</a></li>
+        </ul>
+      </li>
+      <li><a href="curriculum.html">CURRICULUM</a></li>
+      <li class="dropdown">
+        <a href="#">GALLERY</a>
+        <ul class="dropdown-content">
+          <li><a href="annuald.html">ANNUAL DAY</a></li>
+          <li><a href="sportsd.html">SPORTS DAY</a></li>
+          <li><a href="infra.html">INFRASTRUCTURE</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li class="dropdown">
+        <a href="#">CAREER OPPORTUNITIES</a>
+        <ul class="dropdown-content">
+          <li><a href="teacherjob.html">TEACHERS</a></li>
+          <li><a href="caretakerjob.html">CARE TAKER</a></li>
+        </ul>
+      </li>
+      <li><a href="onlinereg.html">ONLINE REGISTRATION</a></li>
+    </ul>
+  </nav>
+  
+        <div class="content">
+            <div class="text">
+                <h1>“The Little Genius Preschool”</h1>
+                <p>
+                    Welcome to The Little Genius! <br>
+                    Where young minds grow, explore, and shine!<br> 
+                    At The Little Genius, we nurture creativity, curiosity, and excellence in a joyful learning environment. 
+                    Join us in shaping the future, one bright mind at a time!
+                </p>
+                <button class="cn"><a href="Addmission.html">ADDMISSION ENQUIRY</a></button>
+                
+            </div>
+            <div class="slider-container">
+                <div class="slider-container">
+                    <div class="slider">
+                        <img src="C:\Users\admin\Desktop\school\download.jpeg" alt="Slide 1">
+                        <img src="C:\Users\admin\Desktop\school\download.jpeg" alt="Slide 2">
+                        <img src="C:\Users\admin\Desktop\school\download.jpeg" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(Flip, SlowMo);
+            
+            // Animate the logo
+            gsap.from(".logo", {
+                duration: 1.5,
+                opacity: 0,
+                y: -50,
+                ease: "bounce"
+            });
+
+            // Animate the menu items
+            gsap.from(".menu ul li", {
+                duration: 1,
+                opacity: 0,
+                y: -20,
+                stagger: 0.2,
+                ease: "power2.out"
+            });
+
+            // Animate the header
+            gsap.from(".content h1", {
+                duration: 2,
+                opacity: 0,
+                scale: 0.5,
+                ease: "elastic.out(1, 0.3)"
+            });
+
+            // Animate the paragraph
+            gsap.from(".content p", {
+                duration: 2,
+                opacity: 0,
+                x: 50,
+                delay: 1,
+                ease: "power2.inOut"
+            });
+
+            // Animate the button
+            gsap.from(".cn", {
+                duration: 2,
+                opacity: 0,
+                scale: 0.5,
+                delay: 1.5,
+                ease: "back.out(1.7)"
+            });
+        });
+    </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".slider img");
+        let currentIndex = 0;
+    
+        function showNextImage() {
+            gsap.to(images[currentIndex], { opacity: 0, duration: 1 });
+            currentIndex = (currentIndex + 1) % images.length;
+            gsap.to(images[currentIndex], { opacity: 1, duration: 1 });
+        }
+    
+        setInterval(showNextImage, 3000);
+    });
+    </script>
+    <script>
+        function toggleMenu() {
+          const menu = document.querySelector('.menu');
+          menu.classList.toggle('active');
+        }
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const dropdowns = document.querySelectorAll('.dropdown');
+      
+          dropdowns.forEach(function (dropdown) {
+            dropdown.addEventListener('click', function (e) {
+              e.stopPropagation();
+              this.classList.toggle('active');
+            });
+          });
+      
+          document.addEventListener('click', function () {
+            dropdowns.forEach(function (dropdown) {
+              dropdown.classList.remove('active');
+            });
+          });
+        });
+      </script>
+      
+      
+    
+</body>
+</html>

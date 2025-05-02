@@ -1,0 +1,818 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: #f0ffff;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    background: rgba(10, 72, 144, 0.895);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 75px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    flex: 1;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu li a:hover {
+    background-color: #041c21;
+  }
+  
+  /* Dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(10, 72, 144, 0.895);
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-content li a {
+    padding: 10px 15px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu {
+      flex-direction: column;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(10, 72, 144, 0.895);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+  
+    #menu-toggle:checked + .menu-icon + .menu {
+      max-height: 1000px;
+    }
+  
+    .menu li {
+      width: 100%;
+    }
+  
+    .dropdown-content {
+      position: static;
+      background-color: rgba(10, 72, 144, 0.895);
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: none;
+    }
+  
+    .dropdown > a::after {
+      content: ' ▼';
+      float: right;
+    }
+  
+    .dropdown > input {
+      display: none;
+    }
+  
+    .dropdown > input:checked + .dropdown-content {
+      display: block;
+    }
+  }
+  @media (max-width: 768px) {
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+  }
+    
+  
+/* Content */
+/* Make content a flex container */
+/* Content Layout */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* Bigger Text */
+.content h1 {
+    font-size: 48px; /* Increased size */
+    font-weight: bold;
+    color: rgb(8, 24, 197);
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 20px; /* Increased size */
+    color: rgb(8, 24, 197);
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Adjust Button */
+.cn {
+    font-size: 18px;
+    padding: 12px 24px;
+}
+
+/* Adjust Slider Position */
+.slider-container {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 100px; /* Pushes it more to the right */
+}
+
+
+/* Button */
+.cn {
+    display: inline-block;
+    background: #2db5d3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cn:hover {
+    background: #1a94b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .slider-frame {
+        height: 200px;
+    }
+
+    .img-container img {
+        height: 200px;
+    }
+}
+
+
+/*FOR CONTACT PAGE ::::: */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #123e47;
+}
+.contact .matter{
+    max-width:800px;
+    text-align: center;
+
+}
+
+.contact .matter h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color:#f0ffff;
+}
+.contact .matter p {
+    font-weight: 300;
+    color:#f0ffff;
+}
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction:  column;
+    font-weight: 300;
+}
+
+.container .con .box .text .h3{
+    font-weight: 500;
+    color: #00bcd4
+}
+
+.contactForm{
+    width:40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width:100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width:100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom:2px solid #333;
+    outline:none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position:absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#666
+}
+
+.contactForm .inputBox input:focus ~span,
+.contactForm .inputBox input:valid ~span,
+.contactForm .inputBox textarea:focus ~span,
+.contactForm .inputBox textarea:valid ~span
+{
+    color:#e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width:100px;
+    background: #00bcd4;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px){
+    .contact{
+        padding:50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo {
+        margin-bottom : 40px;
+    }
+    .container .contactInfo,
+    .contactForm{
+        width : 100%;
+    }
+}
+
+
+/* FOR CURRICULUM ::::::::::: */
+
+.programs {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #123e47;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.programs .consists {
+    text-align: center;
+    max-width: 800px;
+    background-color: white; /* White background for contrast */
+    padding: 20px; /* Adds space inside the box */
+    border-radius: 15px; /* Rounded corners */
+    border: 3px solid #0d2b35; /* Dark border around the box */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+}
+
+.programs .consists h1 {
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #123e47;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+.program-image {
+    width: 100%; /* Makes it responsive */
+    max-width: 500px; /* Limits the max size */
+    height: auto; /* Keeps aspect ratio */
+    display: block; /* Removes extra space below image */
+    margin: 20px auto 0; /* Adds spacing and centers the image */
+    border-radius: 10px; /* Makes corners slightly rounded */
+}
+
+@keyframes move {
+    from{
+        left:0;
+        color:#e40d0d
+    }
+    to{
+        left:70%;
+        color:#10de54
+    }
+}
+
+
+
+
+/* ABOUT US Styling */
+.hi {
+    padding: 40px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: "Poppins", Arial, sans-serif;
+    max-width: 900px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.hi h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.hi h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+.hi p {
+    color: #34495e;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* FOR ONLINE REGISTERATION FORM::::::::::::*/
+
+body {
+    background-color: #f4f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+    }
+}
+.reg h1{
+    padding:20px;
+}
+
+
+/* FOR TEACHING CAREER ::::*/
+
+/* General Styling */
+body {
+    background-color: #f5f7fa; /* Light background for a clean look */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Form Title */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    
+}
+
+/* Form Container */
+.form-contain {
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #34495e;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-contain {
+        padding: 20px;
+    }
+}
+/* FOR ANNUAL DAY ::::*/
+.annual h1{
+    font-size: 28px;
+    text-align: center;
+    margin-left: 50px;
+}
+.annual img{
+    size: 10dvb;
+}
+/** FOR MOBILE STYLING**/
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .slider-container {
+        margin-top: 20px;
+    }
+
+    .content .text {
+        max-width: 90%;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .cn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .menu ul li {
+        text-align: center;
+    }
+
+    .dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .slider-container img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .cn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+}
+/***** FOR ANNUAL DAY FOTOS *******/
+/* Full-screen background image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: rgb(156, 184, 236) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container with transparent white overlay */
+.annual {
+    max-width: 1000px;
+    margin: 100px auto 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading style */
+.annual h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Image style */
+.annual img {
+    width: 300px;
+    height: auto;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.annual img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+/**** FOR SPORTS DAY ***/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/sportsbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sports {
+    background-color: rgba(255, 255, 255, 0.9); /* soft white overlay */
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.sports h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.sports img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 4px solid #fff;
+}
+
+.sports img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
