@@ -29,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'tlgeniusblr@gmail.com';
-        $mail->Password = 'asjy crsw obmg rdvh'; // App password
-        $mail->SMTPSecure = 'tls';
+        $mail->Username = '';
+        $mail->Password = ''; // App password
+        $mail->SMTPSecure = '';
         $mail->Port = 587;
 
         // Sender and recipient
-        $mail->setFrom('tlgeniusblr@gmail.com', 'Online Registration');
+        $mail->setFrom('');
         $mail->addAddress($to);
 
         // Email content
