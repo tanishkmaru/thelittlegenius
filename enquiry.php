@@ -27,11 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         // SMTP Setup
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'tlgeniusblr@gmail.com'; // your Gmail
-        $mail->Password = 'asjy crsw obmg rdvh';   // Gmail App Password
-        $mail->SMTPSecure = 'tls';
+        $mail->Host = '';
+        $mail->SMTPAuth = ;
+        $mail->Username = ''; // your Gmail
+        $mail->Password = '';   // Gmail App Password
+        $mail->SMTPSecure = '';
         $mail->Port = 587;
 
         // Email setup
