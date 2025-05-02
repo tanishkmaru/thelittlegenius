@@ -54,13 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // Gmail SMTP
             $mail->SMTPAuth = true;
-            $mail->Username = 'tlgeniusblr@gmail.com'; // 🔁 your Gmail
-            $mail->Password = 'asjy crsw obmg rdvh';   // 🔁 Gmail App Password
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+            $mail->Username = ''; // 🔁 your Gmail
+            $mail->Password = '';   // 🔁 Gmail App Password
+            $mail->SMTPSecure = '';
+            $mail->Port = ;
 
             // Recipients
-            $mail->setFrom('tlgeniusblr@gmail.com', 'The Little Genius');
+            $mail->setFrom('');
             $mail->addAddress($to);
 
             // Attachments
