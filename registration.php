@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Username = '';
         $mail->Password = ''; // App password
         $mail->SMTPSecure = '';
-        $mail->Port = 587;
+        $mail->Port =;
 
         // Sender and recipient
         $mail->setFrom('');
